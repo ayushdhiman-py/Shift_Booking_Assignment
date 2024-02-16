@@ -1,0 +1,28 @@
+{
+  "name": "react-native-assignment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "author": "Wolt",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.20.2",
+    "boom": "^7.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "luxon": "^1.28.1",
+    "nodemon": "^1.19.4",
+    "uuid": "^9.0.1",
+    "uuidv4": "^6.2.13"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
