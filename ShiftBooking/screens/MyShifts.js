@@ -116,7 +116,7 @@ const MyShifts = () => {
         />
       ) : (
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <Text style={styles.noShiftsText}>! YOU ARE FREE TODAY !</Text>
+          <Text style={styles.noShiftsText}>No shifts added.</Text>
         </View>
       )}
     </View>
@@ -169,7 +169,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#CBD2E1',
   },
   noShiftsText: {
-    color: 'black',
+    fontSize: 20,
+    textAlign: 'center',
+    marginTop: 20,
+    color: '#4F6C92',
   },
 });
 

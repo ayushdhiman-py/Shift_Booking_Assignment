@@ -173,12 +173,16 @@ const AvailableShifts = () => {
         ))}
       </Picker>
 
-      <SectionList
-        sections={filteredShifts}
-        keyExtractor={(item, index) => item.id.toString() + index}
-        renderItem={({item}) => <Shift {...item} onBook={bookShift} />}
-        renderSectionHeader={renderSectionHeader}
-      />
+      {filteredShifts.length === 0 ? (
+        <Text style={styles.noShiftsText}>No available shifts.</Text>
+      ) : (
+        <SectionList
+          sections={filteredShifts}
+          keyExtractor={(item, index) => item.id.toString() + index}
+          renderItem={({item}) => <Shift {...item} onBook={bookShift} />}
+          renderSectionHeader={renderSectionHeader}
+        />
+      )}
     </View>
   );
 };
@@ -222,6 +226,12 @@ const styles = StyleSheet.create({
   areaText: {
     color: '#A4B8D3',
     fontSize: 19,
+  },
+  noShiftsText: {
+    fontSize: 20,
+    textAlign: 'center',
+    top: '42%',
+    color: '#4F6C92',
   },
 });
 
